@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  tg-bot:
+    build: ./Tg_bot
+    container_name: tg-bot
+    environment:
+      - BOT_TOKEN="Your_tg_bot_token"
+    depends_on:
+      - ai_service
+    restart: unless-stopped
+
+volumes:
+  ollama_data:
