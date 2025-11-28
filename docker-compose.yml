@@ -6,8 +6,6 @@ services:
     container_name: tg-bot
     environment:
       - BOT_TOKEN="Your_tg_bot_token"
-    depends_on:
-      - ai_service
     restart: unless-stopped
 
 volumes:
